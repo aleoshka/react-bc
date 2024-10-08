@@ -6,11 +6,12 @@ import './index.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <div>
-    <h1>Hello world</h1>
-    <p>Какой-то текст</p>
-    <p>Какой-то текст</p>
-    <p>Какой-то текст</p>
-    <p>Какой-то текст</p>
+    <h1>Какой-то текст</h1>
+    <ul>
+      <li>Lorem ipsum dolor sit amet.</li>
+      <li>Molestiae, qui! Architecto, hic odio.</li>
+      <li>Nam maiores ut perferendis perspiciatis!</li>
+    </ul>
   </div>
 );
 
