@@ -2,3 +2,8 @@ body {
   background-color: #333;
   color: #ccc;
 }
+
+.h1-style {
+  color: violet;
+  font-size: 15px;
+}

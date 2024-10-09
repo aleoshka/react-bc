@@ -21,7 +21,8 @@ const getRandom = () => Math.floor(Math.random() * 10);
 
 root.render(
   <div>
-    <h1>{value}</h1>
+    {/* <h1 style={{ color: "violet", fontSize: "15px" }}>{value}</h1> */}
+    <h1 className="h1-style">{value}</h1>
     <h2>{firstName} {lastName}</h2>
     <ul>
       {
