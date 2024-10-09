@@ -4,36 +4,25 @@ import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const value = "Какое-то значение";
-const firstName = "Алекс";
-const lastName = "Бейсболка";
-// const items = [
-//   "Элемент 1",
-//   "Элемент 2",
-//   "Элемент 3",
-//   "Элемент 4",
-//   "Элемент 5",
-//   "Элемент 6"
-
-// ];
-
-const getRandom = () => Math.floor(Math.random() * 10);
+const value = "Карточки с картинками, Братишька-мен";
 
 root.render(
-  <div>
-    {/* <h1 style={{ color: "violet", fontSize: "15px" }}>{value}</h1> */}
-    <h1 className="h1-style">{value}</h1>
-    <h2>{firstName} {lastName}</h2>
-    <ul>
-      {
-        // items.map(item => (<li>{item}</li>))
-        Array.from(
-          { length: 5 }, () =>
-          <li>{`Элемент ${getRandom() % 2 ? "ODD" : "EVEN"}`}</li>
-        )
-      }
-    </ul>
-    <p>&copy; Авторские права мои {new Date().getFullYear()}</p>
+  <div className="container col-10">
+    <h1 className="h1-style m-3">{value}</h1>
+    {
+      Array.from(
+        { length: 5 }, (_, index) =>
+        <div className="card m-3">
+          <img src={`https://picsum.photos/${200 + index}/100`} className="card-img-top" alt="..." />
+          <div className="card-body">
+            <h5 className="card-title">Card title</h5>
+            <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+      )
+    }
+
+    <p className="m-3">&copy; Авторские права мои {new Date().getFullYear()}</p>
   </div>
 );
 
