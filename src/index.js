@@ -5,16 +5,34 @@ import './index.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const value = "Какое-то значение";
-const items = ["Элемент 1", "Элемент 2", "Элемент 3"]
+const firstName = "Алекс";
+const lastName = "Бейсболка";
+// const items = [
+//   "Элемент 1",
+//   "Элемент 2",
+//   "Элемент 3",
+//   "Элемент 4",
+//   "Элемент 5",
+//   "Элемент 6"
+
+// ];
+
+const getRandom = () => Math.floor(Math.random() * 10);
 
 root.render(
   <div>
     <h1>{value}</h1>
+    <h2>{firstName} {lastName}</h2>
     <ul>
-      <li>{items[0]}</li>
-      <li>{items[1]}</li>
-      <li>{items[2]}</li>
+      {
+        // items.map(item => (<li>{item}</li>))
+        Array.from(
+          { length: 5 }, () =>
+          <li>{`Элемент ${getRandom() % 2 ? "ODD" : "EVEN"}`}</li>
+        )
+      }
     </ul>
+    <p>&copy; Авторские права мои {new Date().getFullYear()}</p>
   </div>
 );
 
